@@ -13,4 +13,7 @@ puts "----------"
 puts 'Please put a store name and income'
 input = gets.chomp.split(' ')
 # @newStore = Store.create(store_name)
-mystore = Store.create(name: input.first,annual_revenue: input.second,mens_apparel: true,womens_apparel: true);
+@mystore = Store.create(name: input.first,annual_revenue: input.second,mens_apparel: true,womens_apparel: true);
+@mystore.errors.full_messages.each do |message|
+    puts message
+  end
