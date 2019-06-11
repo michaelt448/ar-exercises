@@ -10,3 +10,7 @@ puts "Exercise 7"
 puts "----------"
 
 # Your code goes here ...
+puts 'Please put a store name and income'
+input = gets.chomp.split(' ')
+# @newStore = Store.create(store_name)
+mystore = Store.create(name: input.first,annual_revenue: input.second,mens_apparel: true,womens_apparel: true);
